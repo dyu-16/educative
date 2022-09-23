@@ -1,0 +1,162 @@
+html,
+body {
+  height: 100%; /*setting this explicitly is important*/
+}
+
+body {
+  display: flex; /*flex superpowers activated! */
+  flex-direction: column; /*Stack the flex-items (main and footer elements) vertically NOT horizontally*/
+  background-color: whitesmoke;
+  margin: 0;
+}
+
+main {
+    display: flex;
+    flex: 1 0 auto;
+}
+
+aside {
+    flex: 0 0 45px;
+    display: flex;
+    background-color: whitesmoke;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+aside i.fa {
+    font-size: 1.5em;
+    padding: 30px 5px;
+}
+
+
+#content {
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    margin: 0;
+}
+
+
+#music-head {
+    flex: 0 0 240px;
+    display: flex;
+    padding: 40px;
+    background-color: rgb(26, 25, 25);
+    color: white;
+
+}
+
+#musicHeadAlbumArt {
+    height: 360px;
+}
+
+#musicHeadSongItems {
+    display: flex;
+    flex-direction: column;
+}
+
+#musicHeadSongDetails {
+    padding: 0px 30px 10px 30px;
+}
+
+/* #musicHeadControls {
+    padding: 100px 30px 0px 0px;
+} */
+
+div i.fa {
+    font-size: 1em;
+    padding: 200px 5px 30px 30px;
+}
+
+#song-list {
+    flex: 1 0 auto;
+    list-style-type: none;
+	padding: 5px 10px 0px;
+}
+
+li {
+    display: flex; /*Targets each list containing the paragraphs*/
+    padding: 0 20px;
+    min-height: 50px;
+  }
+  
+  li p {
+    flex: 0 0 25%; /*This is the sweet sauce*/
+  } 
+
+li:nth-child(even) {
+    background-color: gainsboro;
+}
+
+.mixDyeezy {
+    border: 2px black solid;
+    padding: 2px;
+}
+
+footer {
+    display: flex;
+    flex: 0 0 90px;
+    background-color: lightslategray;
+    color: white;
+    font-size: .7em;
+    margin: 0;
+}
+
+.songDetails {
+    display: flex;
+    flex: 0 0 25%;
+    padding: 5px;
+}
+
+#controlCenterAlbumArt {
+    padding: 7px;
+    height: 75px;
+}
+
+#controlCenterSongDetails {
+    float: right;
+}
+
+#controlCenterSongDetails :nth-child(1) {
+    margin-top: 25px;
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+#controlCenterSongDetails :nth-child(2) {
+    margin-bottom: 25px;
+}
+
+.songControls {
+    display: flex;
+    flex: 0 0 75%;
+    padding: 5px;
+    justify-content: end;
+    align-items: center;
+    flex-direction: left;
+}
+
+.songControls .fa {
+    font-size: 2em;
+    padding: 0px 40px;
+}
+
+@media screen and (max-width: 769px) {
+	/* code here only applies to screen devices that have a width lesser than 769px*/
+	aside {
+        display: none;
+    }
+
+    #content {
+        display: flex;
+        flex: 1 0 auto;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    #music-head {
+        flex: auto;
+    }
+}
